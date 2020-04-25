@@ -14,11 +14,11 @@ When the "507_Covid_Project.py" is ran, before user input interaction the data w
 
 **European Centre for Diease Prevention and Control (ECDC)** - *Main Site* - [ECDC](https://www.ecdc.europa.eu/en)
 
-**ECDC Daily Data on COVID-19 Cases ** - *Data Site* - [ECDC](https://opendata.ecdc.europa.eu/covid19/casedistribution/json)
+**ECDC Daily Data on COVID-19 Cases** - *Data Site* - [ECDC](https://opendata.ecdc.europa.eu/covid19/casedistribution/json)
 
 ### Prerequisites
 
-Python packages needed to run this program.
+Python are packages needed to run this program.
 
 ```
 from bs4 import BeautifulSoup
@@ -35,12 +35,12 @@ import plotly.graph_objs as go
 User is then prompted to specify the amount of days to retroactively report on. Requests include present day.
 Below example reuqests information for US and the last 5-days.
 
-Input:
+Input: "US"
 ```
 Enter Country Code (2 Letters) or 'exit': US
 ```
 
-Next input request:
+Next input request: "5"
 
 ```
 Enter Number of Days to retroactively report : 5
@@ -60,8 +60,8 @@ Friday, April 24, 2020        26,543         3,179
 Saturday, April 25, 2020      21,352         1,054
 Enter Country Code (2 Letters) or 'exit':
 ```
-![Confirmed Cases](link-to-image)
-![Confirmed Deaths](link-to-image)
+![Confirmed Cases](https://github.com/garrisok/507_finalproject/blob/master/images/recent_cases.JPG)
+![Confirmed Deaths](https://github.com/garrisok/507_finalproject/blob/master/images/recent_deaths.JPG)
 
 ## Authors
 
