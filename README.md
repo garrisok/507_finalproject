@@ -5,12 +5,11 @@ This is a simple program, aggregating specified data from COVID-19 confirmed cas
 ## How to work it
 
 User is prompted to specify the Alpha2 country code to attain data on.
-    See "Country_Alpha2.txt” file for list of country names and alpha-2 codes.
-    For example, to request US data, user input is "US".
+    Refer to "geoId.txt” file for list of country names and alpha-2 codes. This file contains a list of 249 countries the user can choose from. See examples below for user input.
 
 ### Data Source
 
-When the "507_Covid_Project.py" is ran, before user input interaction the data will be downloaded as a JSON file in the user's current directory as a file named "dailyCovid19Data.json"
+When the "507_Covid_Project.py" is ran data from the European Centre for Disease PRevention and Control (ECDC) site is created into a JSON file on the user's current directory. The user is promted for once data is pulled form the site. The file is created each time the program is ran, updating daily data. The file created is name "dailyCovid19Data.json".
 
 **European Centre for Diease Prevention and Control (ECDC)** - *Main Site* - [ECDC](https://www.ecdc.europa.eu/en)
 
