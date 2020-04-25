@@ -12,7 +12,6 @@ User is prompted to specify the Alpha2 country code to attain data on.
 When the "507_Covid_Project.py" is ran data from the European Centre for Disease PRevention and Control (ECDC) site is created into a JSON file on the user's current directory. The user is promted for once data is pulled form the site. The file is created each time the program is ran, updating daily data. The file created is name "dailyCovid19Data.json".
 
 **European Centre for Diease Prevention and Control (ECDC)** - *Main Site* - [ECDC](https://www.ecdc.europa.eu/en)
-
 **ECDC Daily Data on COVID-19 Cases** - *Data Site* - [ECDC](https://opendata.ecdc.europa.eu/covid19/casedistribution/json)
 
 ### Prerequisites
@@ -31,15 +30,16 @@ import plotly.graph_objs as go
 
 ### User Input
 
-User is then prompted to specify the amount of days to retroactively report on. Requests include present day.
-Below example reuqests information for US and the last 5-days.
+First promt user interacts with is to specify the country to request COVID-19 data on.
 
-Input: "US"
+Example of user input: "US"
 ```
 Enter Country Code (2 Letters) or 'exit': US
 ```
+Next, user is prompted to specify the amount of days to retroactively report on. Requests include present day.
+Below example reuqests information for US and the last 5-days.
 
-Next input request: "5"
+Example of user input request: "5"
 
 ```
 Enter Number of Days to retroactively report : 5
@@ -60,7 +60,9 @@ Saturday, April 25, 2020      21,352         1,054
 Enter Country Code (2 Letters) or 'exit':
 ```
 ![Confirmed Cases](https://github.com/garrisok/507_finalproject/blob/master/images/recent_cases.JPG)
-![Confirmed Deaths](https://github.com/garrisok/507_finalproject/blob/master/images/recent_deaths.JPG)
+
+
+<img src="https://github.com/garrisok/507_finalproject/blob/master/images/recent_deaths.JPG" width="250">
 
 ## Authors
 
