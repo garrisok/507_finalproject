@@ -59,10 +59,9 @@ Friday, April 24, 2020        26,543         3,179
 Saturday, April 25, 2020      21,352         1,054
 Enter Country Code (2 Letters) or 'exit':
 ```
-![Confirmed Cases](https://github.com/garrisok/507_finalproject/blob/master/images/recent_cases.JPG)
+<img src="https://github.com/garrisok/507_finalproject/blob/master/images/recent_cases.JPG" width="650">
 
-
-<img src="https://github.com/garrisok/507_finalproject/blob/master/images/recent_deaths.JPG" width="250">
+<img src="https://github.com/garrisok/507_finalproject/blob/master/images/recent_deaths.JPG" width="650">
 
 ## Authors
 
