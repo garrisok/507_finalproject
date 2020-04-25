@@ -68,31 +68,81 @@ def findRecordsForCountry(countryCode: str, records: list):
 
 
 def findRecordWithMaxCases(records: list):
+    ''' Converts 'cases' of each record and gives the max value
+
+    Parameters
+    ----------
+    list
+
+    Returns
+    -------
+    tuple of max count for 'cases'
+    '''
     getCasesForRecord = lambda record: int(record['cases'])
     #print(getCasesForRecord(records[0]))
     return max(records, key=getCasesForRecord)
 
 
 def findRecordWithMaxDeaths(records: list):
+    ''' Converts 'deaths' of each record and gives the max value
+
+    Parameters
+    ----------
+    list
+
+    Returns
+    -------
+    tuple of max count for 'deaths'
+    '''
     getDeathsForRecord = lambda record: int(record['deaths'])
     #print(getCasesForRecord(records[0]))
     return max(records, key=getDeathsForRecord)
 
 
 def findMostRecentRecords(numDays: int, records: list):
+    ''' Retrieves date information for the amount of most recent dates user chooses.
+
+    Parameters
+    ----------
+    int
+    list
+
+    Returns
+    -------
+    list of dates
+    '''
     convertRecordToDate = lambda record: datetime.date(int(record['year']), int(record['month']), int(record['day']))
     sortedRecords = sorted(records, key=convertRecordToDate)
     return sortedRecords[-numDays:]
 
 
 def addDateObjectToRecords(records: list):
+    ''' Returns formatted dates.
+
+    Parameters
+    ----------
+    list
+
+    Returns
+    -------
+    list - list of dates with proper format
+    '''
     for record in records:
         record['date'] = datetime.date(int(record['year']), int(record['month']), int(record['day']))
     return records
 
 
 def createCasesPlot(records):
+    ''' Creates line plot for confirmed cases to be opened in internet browser.
 
+    Parameters
+    ----------
+    List
+
+    Returns
+    -------
+    none
+    '''
     countryName = records[0]['countriesAndTerritories'].replace('_', ' ')
     xAxis = [record['date'].strftime("%B %d") for record in records]
         #print('xAxis=', xAxis)
@@ -109,7 +159,16 @@ def createCasesPlot(records):
 
 
 def createDeathsPlot(records):
+    ''' Creates line plot for confirmed deaths to be opened in internet browser.
 
+    Parameters
+    ----------
+    list
+
+    Returns
+    -------
+    none
+    '''
     countryName = records[0]['countriesAndTerritories'].replace('_', ' ')
     xAxis = [record['date'].strftime("%B %d") for record in records]
     yAxis = [int(record['deaths']) for record in records]
@@ -119,6 +178,16 @@ def createDeathsPlot(records):
 
 
 def startInteractivePrompt():
+    ''' Interacts with user, runs the program
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    none
+    '''
     covidOTD = convertEuroDataToDict()
     records = covidOTD['records']
     while True:
